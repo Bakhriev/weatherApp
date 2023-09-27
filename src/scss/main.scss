@@ -99,9 +99,13 @@ body {
 	transition: 150ms linear all;
 	&:hover {
 		box-shadow: 0 0px 5px rgb(255, 255, 255);
+		-webkit-box-shadow: 0 0px 5px rgb(255, 255, 255);
+		-moz-box-shadow: 0 0px 5px rgb(255, 255, 255);
 	}
 	&.active {
 		box-shadow: 0 0px 5px rgb(255, 255, 255);
+		-webkit-box-shadow: 0 0px 5px rgb(255, 255, 255);
+		-moz-box-shadow: 0 0px 5px rgb(255, 255, 255);
 	}
 	&__bot {
 		margin-top: auto;
@@ -131,6 +135,8 @@ body {
 }
 .search-input {
 	box-shadow: 0 0px 5px rgb(255, 255, 255);
+	-webkit-box-shadow: 0 0px 5px rgb(255, 255, 255);
+	-moz-box-shadow: 0 0px 5px rgb(255, 255, 255);
 	padding: 10px 20px;
 	border-radius: 10px;
 	outline: none;
