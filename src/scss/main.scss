@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url("../main1.jpg") no-repeat center/cover;
+	min-height: 100vh;
+	font-family: monospace;
+	font-size: 20px;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.header {
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+	@media screen and (max-width: 992px) {
+		flex-direction: column;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__logo {
+	}
+}
+.country {
+	&__state {
+		font-size: 40px;
+	}
+
+	&__name {
+		font-size: 20px;
+	}
+}
+.current-degree {
+	font-size: 60px;
+	font-weight: 900;
+}
+.weather-info {
+	padding-top: 50px;
+	@media screen and (max-width: 992px) {
+		padding-top: 0;
+	}
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	&__item {
+		display: flex;
+		gap: 20px;
+		img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+.main {
+	padding: 0 20px;
+	padding-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.cards {
+	margin-top: auto;
+	flex-wrap: wrap;
+	display: flex;
+	gap: 10px 20px;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 10px;
+	min-height: 200px;
+	color: #fff;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0);
+	border-radius: 2px;
+	transition: 150ms linear all;
+	&:hover {
+		box-shadow: 0 0px 5px rgb(255, 255, 255);
+	}
+	&.active {
+		box-shadow: 0 0px 5px rgb(255, 255, 255);
+	}
+	&__bot {
+		margin-top: auto;
+	}
+	&__pm {
+	}
+
+	&__degree {
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+
+	&__feel {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px;
+		font-size: 20px;
+	}
+}
+
+.header {
+	&__form {
+		@media screen and (max-width: 992px) {
+			order: -1;
+		}
+	}
+}
+.search-input {
+	box-shadow: 0 0px 5px rgb(255, 255, 255);
+	padding: 10px 20px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	font-size: 18px;
+	&::placeholder {
+		color: #c8c2c2;
+	}
+}
+.form-btn {
+	scale: 0;
+	overflow: hidden;
+}
